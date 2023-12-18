@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    text-align: left;
+    background: #161422 url(img/bg.jpg) top center repeat-y;
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* CONTAINER */
+
+#wrapper {
+    padding: 0;
+    height: 1000px;
+    width: auto;
+    position: relative;
+}
+
+/* PICTURE */
+.photo-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.circular-photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* NAVIGATION */
+#navigation {
+    height: 100px;
+	  min-height: 100vh;
+    width: 250px;
+    padding: 5px;
+    color: white;
+    float: left;
+    text-align: center;
+    background: #161422;
+    height: 100vh;
+}
+
+#navigation p {
+    font-size: 100%;
+    padding: 0 20px;
+}
+
+#navigation h1 {
+    margin: 20px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    color: white;
+}
+
+/* CONTENTS */
+
+#main-contents {
+    width: 600px;
+    margin: 0 0 0 490px;
+    padding: 100px;
+    color: white;
+    position: relative;
+    background: url(img/overlay2.png);
+    justify-content: center;
+}
+
+#main-contents h2 {
+    text-align: center;
+    color: white;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.social-media {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
+ion-icon:hover {
+    color: #4838A6;
+    transition: all .3s;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #4838A6;
+}
+
+/* IMAGES */
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+/* PROGRESS BAR */
+
+.container h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container h3 {
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.progress-bar {
+    width: 360px;
+    height: 12px;
+    background-color: #d1d1d1;
+    margin: auto;
+    margin-bottom: 100px;
+    opacity: .8;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: "0%";
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    bottom: -18px;
+}
+
+.progress-bar::after {
+    content: "100%";
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    bottom: 18px;
+}
+
+.progress-bar span {
+    display: block;
+    width: 80%;
+    height: 12px;
+    background-color: #87b1de;
+    animation: fill 1s ease-in 1;
+}
+
+.download-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+}
+
+.download-button {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.download-button:hover {
+    background-color: #4b6043;
+    color: black;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80;
+    }
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    #navigation {
+        width: 100%;
+        float: none;
+        position: fixed;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    #main-contents {
+        margin: 0;
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    .progress-bar {
+        width: 100%;
+  
+        margin-bottom: 30px;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+}
